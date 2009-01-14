@@ -1,0 +1,24 @@
+Cancel-x1 : fst . (f /\ g) = f
+Cancel-x2 : snd . (f /\ g) = g
+Reflex-x : fst /\ snd = id
+Fusion-x : (f /\ g) . h = f . h /\ g . h
+Def-x : f >< g = f . fst /\ g . snd
+Absor-x : (f >< g) . (h /\ i) = f . h /\ g . i
+Functor-x : (f >< g) . (h >< i) = f . h >< g . i
+Functor-id-x : id >< id = id
+Nat-fst : fst . (f >< g) = f . fst
+Nat-snd : snd . (f >< g) = g . snd
+Cancel-+1 : (f \/ g) . inl = f
+Cancel-+2 : (f \/ g) . inr = g
+Reflex-+ : inl \/ inr = id
+Fusion-+ : f . (g \/ h) = f . g \/ f . h
+Def-+ : f -|- g = inl . f \/ inr .g
+Absor-+ : (f \/ g) . (h -|- i) = f . h \/ g . i
+Functor-+ : (f -|- g) . (h -|- i) = f . h -|- g . i
+Functor-id-+ : id -|- id = id
+Lei-Troca1 : (f /\ g) \/ (h /\ i) = (f \/ h) /\ (g \/ i)
+Lei-Troca2 : (f \/ h) /\ (g \/ i) = (f /\ g) \/ (h /\ i)
+Nat-id1 : f . id = f
+Nat-id2 : id . f = f
+Univ-x : h = (f /\ g) <=> (fst . h = f) & (snd . h = g)
+Def-swap : swap := snd /\ fst

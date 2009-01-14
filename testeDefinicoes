@@ -1,0 +1,7 @@
+Def-fst : fst;
+Def-snd: snd;
+Def-inl : inl;
+Def-inr : inr;
+Def-id : id;
+Def-T  : T;
+Def-swap : swap/0 = snd /\ fst;
